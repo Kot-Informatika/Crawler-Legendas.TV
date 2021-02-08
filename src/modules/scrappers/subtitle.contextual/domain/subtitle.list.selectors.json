@@ -1,0 +1,5 @@
+{
+    "list": "body > div.container > div:nth-child(3) > div > article > div > div",
+    "link": "p:nth-child(1) > a",
+    "analytics": "p:nth-child(2)"
+}
