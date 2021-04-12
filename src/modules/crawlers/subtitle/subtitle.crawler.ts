@@ -73,7 +73,7 @@ export default class SubtitleCrawler {
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
-        this.page = await this.browser.newPage();
+        this.page = (await browser.pages())[0]; // reusing the first tab that Puppeteer creates
         await this.page.setRequestInterception(true);
         this.page.on('request', request => {
             const overrides: { method?: string; postData?: string, headers?: any } = {};
